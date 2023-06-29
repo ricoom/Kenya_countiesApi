@@ -14,14 +14,8 @@ public class CountyServiceImpl implements CountyServices{
 	
 private CountyRepository countyrepo;
 
-	public CountyServiceImpl(CountyRepository countyrepo) {
-	
-	this.countyrepo = countyrepo;
-}
-
 	@Override
 	public List<County> getCounties() {
-		// TODO Auto-generated method stub
 		return countyrepo.findAll();
 	}
 
@@ -41,6 +35,10 @@ private CountyRepository countyrepo;
 		}
 	
 		return null;
+	}
+
+	public CountyServiceImpl(CountyRepository countyrepo) {
+		this.countyrepo = countyrepo;
 	}
 
 }

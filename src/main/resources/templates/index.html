@@ -1,19 +1,55 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>my county</title>
 </head>
+
 <body>
     <header>
         <nav>
+            <div class="logo"><button>dark</button></div>
             <ul>
+                <li><a href="http://">Home</a></li>
                 <li><a href="http://">api</a></li>
-                <li><a href="http://">About</a></li>
                 <li><a href="http://">blog</a></li>
+                <li><a href="http://">about</a></li>
+                <div class="registration">
+                    <li><a href="http://">login</a></li>
+                    <span>
+                        <li><a href="http://">register</a></li>
+                    </span>
+                </div>
+
             </ul>
         </nav>
     </header>
+
+    <div class="header-container">
+<h1>expl<span>ore</span> your <br> country</h1>
+<select  id="selectCounty"  onchange="showsubcounty(this)">
+    <option value="">select county</option>
+</select>
+    </div>
+    <div class="body-container">
+        <div class="fetures-card">
+            
+            <div id="subcountyCards"></div>
+        </div>
+
+        <div class="fetures-card">
+            <h1>hello</h1>
+            <div id="wardCards"></div>
+
+        </div>
+        <div class="fetures-card">
+            <h1>hello</h1>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
+
 </html>

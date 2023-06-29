@@ -19,10 +19,6 @@ public class CountyController {
 	
 	private CountyServiceImpl countyservice;
 	
-public CountyController(CountyServiceImpl countyservice) {
-		
-		this.countyservice = countyservice;
-	}
 @GetMapping("/counties")
 public ResponseEntity<List<County>> displayCountie(){
 	return new ResponseEntity<List<County>>(countyservice.getCounties(),HttpStatus.OK);
@@ -30,5 +26,8 @@ public ResponseEntity<List<County>> displayCountie(){
 @GetMapping("/constituencies/{countyname}")
 public ResponseEntity<List<Constituency>> displayConstituencies(@PathVariable String countyname){
 	return new ResponseEntity<List<Constituency>>(countyservice.getConstituencies(countyname),HttpStatus.OK);
+}
+public CountyController(CountyServiceImpl countyservice) {
+	this.countyservice = countyservice;
 }
 }
